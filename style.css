@@ -1,0 +1,54 @@
+.header{
+    background-color: aqua;
+}
+.library{
+    background-color: bisque;
+}
+.container{
+    height: 100vh;
+    display:grid;
+    grid-template-rows: 1fr 7fr;
+}
+.library{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    grid-template-rows: 150px;
+    gap:10px;
+}
+
+.card{
+    background-color: blue;
+   max-height: 150px;    
+   padding: 20px;
+   display:grid;
+   grid-template-rows: auto auto auto 1fr;
+   align-items: end;
+   gap:10px;
+
+}
+.p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px;
+    margin:10px;
+}
+#book-form{
+    display:grid;
+    width:400px;
+    justify-content: center;
+}
+.form-buttons{
+    margin:20px;
+    display:flex;
+    gap:20px;
+}

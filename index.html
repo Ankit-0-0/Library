@@ -8,6 +8,51 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="container">
+       <div class="header">
+           <div><h1>Library</h1></div> 
+           <button class="addbook">ADD BOOK</button>
+       </div>
+
+       <div class="library">
+
+            <div class="card">
+               <div class="name">Bookname</div>
+               <div class="author"> Author :</div>
+               <div class="page">pages :</div>
+               <div class="buttons"> 
+                <button id="read-btn"> READ ALREADY</button>
+                <button> REMOVE</button>
+               </div>
+            </div>
+        
+       </div>
+
+    </div>
+    <dialog id="book-dialog" >
+        <form id="book-form">
+            <label for="form-name">
+                <h3>Book Name</h3>
+                <input type="text" id="form-name" name="name" required>
+            </label>
+            <label for="form-author">
+                <h3>Author</h3>
+                <input type="text" name="author" id="form-author" required>
+            </label>
+            <h3>Pages</h3>
+            <label for="form-pages">
+                <input type="number" name="pages" min="1" id="form-pages" required>
+            </label>
+            <label for="form-read">
+                <h3>Have you read the book ? 
+                    <input type="checkbox" name="read" id="form-read">
+                </h3>
+            </label>
+            <div class="form-buttons">
+                <button type="submit" id="submit-btn">CREATE</button>
+                <button type="button" id="cancel-btn">CANCEL</button>
+            </div>
+        </form>
+    </dialog>
 </body>
 </html>
