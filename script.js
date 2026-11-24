@@ -4,17 +4,21 @@ function book( name,author,pages,readstatus){
     this.author=author
     this.pages=pages;
     this.readstatus=readstatus
-    this.id=crypto.randomUUID
+    this.id=crypto.randomUUID();
 }
 function addBookToLibrary(name,author,pages,readstatus){
      let newBook= new book(name,author,pages,readstatus);
      myLibrary.push(newBook);
 }
+let container=document.querySelector(".library");
+let basecard=document.querySelector(".card");
 function displayBooks(){
+    container.replaceChildren();
+
 for(let i=0;i<myLibrary.length;i++){
-   
-    let container=document.querySelector(".library");
-    let clone=document.querySelector(".card").cloneNode(true);
+
+   let clone=basecard.cloneNode(true);
+
     clone.querySelector(".name").textContent=`${myLibrary[i].name}`;
     clone.querySelector(".author").textContent=`Author : ${myLibrary[i].author}`;
     clone.querySelector(".page").textContent=`Total pages : ${myLibrary[i].pages}`;
@@ -53,6 +57,26 @@ form.addEventListener("submit",(event)=>{
     form.reset();
 
 })
+container.addEventListener("click",(event)=>
+{
+    const card=event.target.closest(".card")
+    const bookId=card.dataset.id;
+    const Index=myLibrary.findIndex((book)=>book.id===bookId)
+
+if(event.target.id=="remo-btn"){
+  if(Index !==-1)
+        myLibrary.splice(Index,1);
+    card.remove();
+}
+else if(event.target.id =="read-btn"){
+myLibrary[Index].readstatus=!(myLibrary[Index].readstatus);
+event.target.textContent=myLibrary[Index].readstatus?"ALREADY READ" :"NOT READ"
+
+}
+
+}
+     )
+
 
 
 

@@ -1,8 +1,8 @@
 .header{
-    background-color: aqua;
+    background-color: rgb(11, 225, 225);
 }
 .library{
-    background-color: bisque;
+    background-color: rgb(85, 255, 0);
 }
 .container{
     height: 100vh;
@@ -14,10 +14,11 @@
     grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
     grid-template-rows: 150px;
     gap:10px;
+    padding:20px;
 }
 
 .card{
-    background-color: blue;
+    background-color: rgb(201, 201, 17);
    max-height: 150px;    
    padding: 20px;
    display:grid;
@@ -34,6 +35,9 @@
 .buttons{
     display: flex;
     justify-content: space-between;
+    height: 30px;
+    
+
 }
 .header{
     display: flex; 
@@ -51,4 +55,41 @@
     margin:20px;
     display:flex;
     gap:20px;
+}
+body{
+    background-color: bisque;
+}
+#read-btn,#remo-btn{
+    border-radius: 10px;
+    color: rgb(191, 204, 106);
+    background-color: rgb(168, 14, 35);
+    box-shadow: 0 5px 5px rgb(59, 2, 2) ;
+    border:1px solid black
+}
+button:hover{
+    transform: translate(2px,2px);
+}
+button:active{
+  transform: translate(-4px,-4px);
+  box-shadow: 0 0px 0px rgb(85, 255, 0);
+}
+.addbook{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(237, 15, 152);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid red;
+    box-shadow: 2px 4px 4px rgb(33, 24, 24);
+
+}
+.addbook:active{
+
+    background-color: crimson;
+    color: azure;
+    
+}
+.card{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    font-weight: 200;
 }
